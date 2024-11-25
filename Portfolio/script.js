@@ -138,5 +138,31 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
+// Pilih semua elemen dengan kelas "box"
+const boxes = document.querySelectorAll('.fade');
+
+// Fungsi untuk mengecek apakah elemen terlihat di layar
+function checkVisibility() {
+    const triggerBottom = window.innerHeight * 0.9; // Ambang bawah untuk memicu animasi
+    const triggerTop = window.innerHeight * 0.1;  // Ambang atas untuk animasi saat menggulir ke atas
+
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top;
+        const boxBottom = box.getBoundingClientRect().bottom;
+
+        // Tambahkan kelas visible jika elemen terlihat di layar
+        if (boxTop < triggerBottom && boxBottom > triggerTop) {
+            box.classList.add('visible');
+        } else {
+            box.classList.remove('visible'); // Hapus kelas jika elemen keluar dari layar
+        }
+    });
+}
+
+// Jalankan fungsi saat halaman pertama kali dimuat dan saat digulir
+window.addEventListener('scroll', checkVisibility);
+window.addEventListener('load', checkVisibility);
+
+
 
 

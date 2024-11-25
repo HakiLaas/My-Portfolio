@@ -42,7 +42,7 @@
     font-family: poppins, sans-serif;
     text-decoration: none;
     transition: .2;
-    transition: all .5s ease;
+    transition: all .3s ease;
     scroll-behavior: smooth;
 }
 

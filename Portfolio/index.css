@@ -127,7 +127,7 @@ nav .togglebtn span {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 6rem;
+    padding-top: 5.5em;
 }
 
 .container .hero-pic{
@@ -137,6 +137,7 @@ nav .togglebtn span {
     overflow: hidden;
     border: 15px solid var(--black);
     box-shadow: var(--shadow-all);
+    transition: .3s linear;
 }
 
 .container-about .hero-pic{
@@ -525,22 +526,6 @@ main {
     padding: 2rem;
 }
 
-.scroll-section {
-    min-height: 100vh; /* Pastikan section mengambil tinggi penuh viewport */
-    overflow: visible; /* Pastikan isinya tidak terpotong */
-    padding: 2rem 1rem; /* Kurangi padding untuk layar kecil */
-    opacity: 0; /* Elemen tersembunyi */
-    transform: translateY(50px);
-    transition: opacity .8s ease-in-out, transform .8s ease-in-out; /* Transisi animasi */
-}
-
-/* Kelas yang ditambahkan ketika elemen terlihat */
-.scroll-section.show {
-    transition: .2s linear;
-    transform: translateY(0); /* Kembali ke posisi asli */
-    opacity: 1; /* Elemen terlihat */
-}
-
 /* Contact */
 .tittle-contact h3 span{
     font-size: 2.5rem;
@@ -568,6 +553,34 @@ main {
 footer{
     height: 20vh;
     
+}
+
+.scroll-section {
+    min-height: 100vh; /* Pastikan section mengambil tinggi penuh viewport */
+    overflow: visible; /* Pastikan isinya tidak terpotong */
+    padding: 2rem 1rem; /* Kurangi padding untuk layar kecil */
+    opacity: 0; /* Elemen tersembunyi */
+    transform: translateY(50px);
+    transition: opacity .8s ease-in-out, transform .8s ease-in-out; /* Transisi animasi */
+}
+
+/* Kelas yang ditambahkan ketika elemen terlihat */
+.scroll-section.show {
+    transition: .2s linear;
+    transform: translateY(0); /* Kembali ke posisi asli */
+    opacity: 1; /* Elemen terlihat */
+}
+
+
+.fade{
+    opacity: 0; /* Mulai dengan tidak terlihat */
+    transform: translateY(50px); /* Mulai dengan posisi sedikit ke bawah */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Efek transisi */
+}
+
+.fade.visible {
+    opacity: 1; /* Tampilkan elemen */
+    transform: translateY(0); /* Kembalikan ke posisi asli */
 }
 
 /* Responsive */
