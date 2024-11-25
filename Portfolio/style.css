@@ -1,0 +1,63 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+/* Icons */
+@import url('https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css');
+
+:root{
+    /* Color */
+    --white: #fafdff;
+    --black: #323232;
+    --gray: #dddddd;
+    --blackgray: #515151;
+
+    /* Color Test */
+    --greenblue: #00b68c;
+    --greensky: rgb(85, 206, 164);
+    --orange: #f77f00;
+
+    /* Box Shadow */
+    --shadow-all: 5px 7px 25px rgba(0, 0, 0, 0.5);
+    --shadow-gradient-5: rgba(0, 0, 0, 0.5);
+    --shadow-gradient-8: rgba(0, 0, 0, 0.8);
+    --shadow-greensky: rgba(0, 187, 122, 0.5);
+    --shadow-gradient-white-5: rgba(255, 255, 255, 0.5);
+    --shadow-gradient-white-8: rgba(255, 255, 255, 0.8);
+    --shadow-button: 0 10px 10px -8px rgba(231, 230, 230, 0.78);
+    --shadow-bottom: 5px 13px 30px rgba(0, 0, 0, 0.2);
+
+    /* Text Colow */
+    --text-black: #000000;
+    --text-white: #fff;
+
+    /* Font Size */
+    --font-icon:30px;
+    --font-weight-light: 600;
+    --font-weight-bold: 800;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: poppins, sans-serif;
+    text-decoration: none;
+    transition: .2;
+    transition: all .5s ease;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow-x: hidden;  
+}
+
+body.dark{
+    --black: #fafdff;
+    --white: #323232;
+    --text-black: #fff;
+    --text-white: #000000;
+    --gray: #323232;
+    --blackgray: #fafdff;
+    --pitch-black: #c7c7c7;
+    --shadow1: 0 8px 20px 0 hsla(0, 0%, 100%, 0.05);
+    --shadow-button:  5px 13px 10px rgba(0, 0, 0, 0.1);
+}
