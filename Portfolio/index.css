@@ -377,7 +377,149 @@ nav .togglebtn span {
 }
 
 /* Service */
-.service-container
+.service-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 0 5rem;
+    flex-wrap: wrap;
+}
+
+.service-tittle h2{
+    font-size: 3rem;
+    color: var(--text-black);
+    text-align: center;
+    padding: 7rem 0;
+}
+
+.service-tittle h2 span{
+    color: var(--greenblue);
+}
+
+/* Text Content */
+.text-content {
+    flex: 1;
+    max-width: 400px;
+}
+
+.text-content h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--greenblue);
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+}
+
+.text-content .btn-learn-more {
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.text-content .btn-learn-more:hover {
+    background-color: #2563eb;
+}
+
+/* Card Content */
+.card-content{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    flex: 2;
+    max-width: 600px;
+}
+
+.card{
+    background: var(--black);
+    box-shadow: var(--shadow-bottom-card);
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover{
+    transform: translateY(-80px);
+    box-shadow: var(--shadow-bottom-card);
+}
+
+.card .icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1rem auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem 0;
+    color: var(--greenblue);
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-content {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .card-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animation Card */
+.card-content .card:nth-child(1) {
+    transform: translateY(-50px);
+}
+
+.card-content .card:nth-child(2) {
+    transform: translateY(20px);
+}
+
+.card-content .card:nth-child(3) {
+    transform: translateY(-50px);
+}
+
+.card-content .card:nth-child(4) {
+    transform: translateY(10px);
+}
+
+/* Tambahkan transisi agar smooth */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+section {
+    margin-bottom: 2rem;
+}
 
 
 /* Gallery */
@@ -386,7 +528,7 @@ nav .togglebtn span {
     margin: 0 2rem;
 }
 
-.gallery-container h2, .gallery-container span, .service-tittle h2, .service-tittle span, .tittle-contact h2 span{
+.gallery-container h2, .gallery-container span{
     font-size: 3rem;
     color: var(--text-black);
     text-align: center;
@@ -525,11 +667,12 @@ nav .togglebtn span {
 main {
     padding: 2rem;
 }
+ 
 
 /* Contact */
-.tittle-contact h3 span{
+.tittle-contact h2 span{
     font-size: 2.5rem;
-    color: var(--white);
+    color: var(--black);
 }
 
 .tittle-contact p{
@@ -708,6 +851,13 @@ footer{
     }
     .container-about h2{
         margin-left: 0;
+    }
+    .service-content{
+        display: block;
+    }
+    .text-content{
+        text-align: start;
+        margin-bottom: 5rem;
     }
     .gallery {
         margin: 0; /* Pusatkan galeri di layar kecil *//* Gunakan lebar penuh */
