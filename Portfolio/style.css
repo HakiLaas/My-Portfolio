@@ -46,6 +46,7 @@
     transition: .2;
     transition: all .3s ease;
     scroll-behavior: smooth;
+    list-style-type: none;
 }
 
 body{

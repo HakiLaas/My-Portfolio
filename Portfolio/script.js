@@ -42,29 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
 document.addEventListener("DOMContentLoaded", () => {
     const themeToggle = document.getElementById("theme");
-    const body = document.body;
-
-    // Event listener untuk klik tombol
-    themeToggle.addEventListener("click", () => {
-        // Toggle class "dark-mode" pada body
-        body.classList.toggle("dark");
-
-        // Ganti ikon berdasarkan tema aktif
-        if (body.classList.contains("dark")) {
-            themeToggle.classList.remove("bx-sun");
-            themeToggle.classList.add("bx-moon");
-        } else {
-            themeToggle.classList.remove("bx-moon");
-            themeToggle.classList.add("bx-sun");
-        }
-    });
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const themeToggle = document.getElementById("sun");
     const body = document.body;
 
     // Event listener untuk klik tombol

@@ -116,14 +116,16 @@
         <div class="service-container">
                 <div class="service-content">
                     <div class="text-content fade">
-                        <h1>Need Amazing Design?</h1>
+                        <h1>Need Amazing <span>Design?</span></h1>
                         <p>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id suscipit ex.
                             Suspendisse rhoncus laoreet purus quis elementum. Phasellus sed efficitur dolor, et ultrices sapien.
                         </p>
-                        <a href="#" class="btn active">Hire Me!</a>
+                        <div class="btn-more fade">
+                            <a href="#" class="btn ">Learn More</a>
+                        </div>
                     </div>
-                    <div class="card-content">
+                    <div class="card-content fade">
                         <div class="card fade">
                             <h3>Service</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt repellat quae dolore voluptate magni vero eligendi!</p>
@@ -195,10 +197,48 @@
     <section class="scroll-section" id="contact" style="min-height: 110vh; background: var(--white); color: var(--text-white);">
         <div class="container-contact">
             <div class="tittle-contact fade">
-                <h2><span>Have You Any Questions?</span></h2>
-                <p>I'M AT YOUR SERVICE</p>
+                <h2><span>Contact</span> Me</h2>
+                <p>24/7 We will answer you question and problems</p>
             </div>
-            
+            <div class="contact-grid">
+                <!-- Form Section -->
+                <div class="form-section">
+                    <form>
+                        <div class="input-group">
+                            <input class="fade" type="text" placeholder="First name" required />
+                            <input class="fade" type="text" placeholder="Last name" required />
+                        </div>
+                        <input class="fade" type="email" placeholder="Email" required />
+                        <input class="fade" type="tel" placeholder="Phone number" required />
+                        <textarea class="fade" placeholder="Leave us a message..." required></textarea>
+                        <h5 class="fade">Services</h5>
+                        <div class="checkbox-group">
+                            <label class="fade"><input type="checkbox" /> Website design</label>
+                            <label class="fade"><input type="checkbox" /> UX design</label>
+                            <label class="fade"><input type="checkbox" /> User research</label>
+                            <label class="fade"><input type="checkbox" /> Content creation</label>
+                        </div>
+                        <button class="btns btns1 fade" type="submit">Send message</button>
+                    </form>
+                </div>
+    
+                <!-- Info Section -->
+                <div class="info-section">
+                    <h2 class="fade"><span>Chat with</span> Me</h2>
+                    <p class="fade"> Lorem ipsum dolor sit amet consectetur adipisicing</p><br>
+                    <ul>
+                        <li class="fade"><i class='bx bxs-conversation' ></i><a href="#">Start a live chat</a></li>
+                        <li class="fade"><i class='bx bxs-envelope' ></i><a href="#">Shoot us an email</a></li>
+                        <li class="fade"><i class='bx bxl-whatsapp-square' ></i><a href="#">Message us on Whatsapp</a></li>
+                    </ul>
+                    <h3 class="fade"><span>Call</span> Me</h3>
+                    <p class="fade">Lorem ipsum dolor sit amet consectetur adipisicing</p><br>
+                    <p class="fade"><i class='bx bxs-phone-call' ></i><a href="tel:+15550000000">+62 85934832133</a></p>
+                    <h3 class="fade"><span>Visit</span> Me</h3>
+                    <p class="fade">Lorem ipsum dolor sit amet consectetur adipisicing</p><br>
+                    <p class="fade"><i class='bx bx-current-location' ></i><a href="#">Jl. Br Padang Kerobokan XXXII</a></p>
+                </div>
+            </div>
         </div>
     </section>
 </main>
