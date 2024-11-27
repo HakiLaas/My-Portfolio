@@ -25,10 +25,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const nextSection = document.querySelector(".next-section a");
     const aboutSection = document.getElementById("about");
+    const footerSection = document.getElementById("footer");
     const arrowIcon = nextSection.querySelector("i");
     
     window.addEventListener("scroll", () => {
         const aboutTop = aboutSection.getBoundingClientRect().top;
+        const footerTop = footerSection.getBoundingClientRect().top;
     
         if (aboutTop <= 100) {
             arrowIcon.classList.remove("bx-chevron-down");
@@ -61,6 +63,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const themeToggle = document.getElementById("sun");
+    const body = document.body;
+
+    // Event listener untuk klik tombol
+    themeToggle.addEventListener("click", () => {
+        // Toggle class "dark-mode" pada body
+        body.classList.toggle("dark");
+
+        // Ganti ikon berdasarkan tema aktif
+        if (body.classList.contains("dark")) {
+            themeToggle.classList.remove("bx-sun");
+            themeToggle.classList.add("bx-moon");
+        } else {
+            themeToggle.classList.remove("bx-moon");
+            themeToggle.classList.add("bx-sun");
+        }
+    });
+});
+
 
 // Ambil elemen lightbox
 const lightbox = document.getElementById('lightbox');
