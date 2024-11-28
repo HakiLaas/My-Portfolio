@@ -13,6 +13,7 @@
     /* Color Test */
     --greenblue: #00b68c;
     --greendark: #00a57f;
+    --green-button: #7cf03d;
     --greensky: rgb(85, 206, 164);
     --orange: #f77f00;
 
@@ -59,6 +60,7 @@ body.dark{
     --black: #fafdff;
     --white: #323232;
     --greenblue: #7cf03d;
+    --green-button: #00a57f;
     --text-black: #fff;
     --text-white: #000000;
     --blackgray: #7cf03d;

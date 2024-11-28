@@ -208,7 +208,7 @@ nav .togglebtn span {
 }
 .btn-group .btn:hover {
     color: var(--black);
-    border: 2px solid var(--greendark);
+    border: 2px solid var(--green-button);
 }
 .btn-group .btn::before {
     content: '';
@@ -219,7 +219,7 @@ nav .togglebtn span {
     height: 400%;
     width: 0;
     z-index: -1;
-    background: var(--greendark);
+    background: var(--green-button);
     transition: .7s;
 }
 .btn-group .btn:hover::before {
@@ -227,7 +227,7 @@ nav .togglebtn span {
 }
 
 .btn.active{
-    border-color: rgb(0, 182, 140);
+    border-color: var(--green-button);
 }
 
 .hero-text .social i{
@@ -244,7 +244,7 @@ nav .togglebtn span {
     bottom: 100px;
     right: 50px;
     z-index: 20;
-    background-color: #43c000;
+    background-color: var(--greenblue);
     border-radius: 50%;
     padding: 10px;
     cursor: pointer;
@@ -510,7 +510,7 @@ nav .togglebtn span {
 .card h3 {
     font-size: 1.2rem;
     margin: 1rem 0 0.5rem 0;
-    color: var(--greendark);
+    color: var(--green-button);
 }
 
 .card p {
@@ -788,7 +788,7 @@ textarea {
 }
 
 .btns1::before {
-    content: "";
+    content: "";    
     position: absolute;
     top: 0;
     left: 0;
@@ -1131,6 +1131,21 @@ input[type="checkbox"] {
     }
     .card-content{
         grid-template-columns: 1fr;
+    }
+    .card-content .card:nth-child(1) {
+        transform: translateY(0px);
+    }
+    
+    .card-content .card:nth-child(2) {
+        transform: translateY(0px);
+    }
+    
+    .card-content .card:nth-child(3) {
+        transform: translateY(0px);
+    }
+    
+    .card-content .card:nth-child(4) {
+        transform: translateY(0px);
     }
     .text-content{
         text-align: start;
