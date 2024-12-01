@@ -1038,7 +1038,7 @@ input[type="checkbox"] {
     padding: 0;
 }
   
-  .footer-column ul li {
+.footer-column ul li {
     margin: 10px 0;
 }
   
@@ -1062,14 +1062,6 @@ input[type="checkbox"] {
 .footer-social p{
     color: var(--white);
     font-size: .8rem;
-}
-  
-.social-widget {
-    margin-bottom: 20px;
-    background: #111;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: left;
 }
   
 .social-icons a {
