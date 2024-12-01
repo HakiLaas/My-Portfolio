@@ -30,12 +30,13 @@ header {
     flex-wrap: wrap;
 }
 
-/* Sun and moon */
+/* Icon */
 .bx.bx-sun {
     color: var(--black);
     font-size: 30px;
     position: absolute;
     top: 25px;
+    right: 5.5rem;
     width: 30px;
     cursor: pointer;
 }
@@ -45,8 +46,60 @@ header {
     font-size: 30px;
     position: absolute;
     top: 25px;
+    right: 5.5rem;
     width: 30px;
     cursor: pointer;
+}
+
+.bx.bx-globe {
+    color: var(--black);
+    font-size: 30px;
+    position: absolute;
+    top: 25px;
+    right: 2rem;
+    width: 30px;
+    cursor: pointer;
+}
+
+nav .nav-links .translation-content a {
+    font-size: .9rem;
+    height: 50px;
+    width: 100px;
+    color: var(--white);
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.translation-content{
+    display: none;
+    position: absolute;
+    right: .5rem;
+    top: 3.5rem;
+    background-color: var(--black);
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: .4rem;
+    transition: .3s;
+}
+
+nav .translation-content a {
+    color: var(--white);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    text-align: center;
+    transition: var(--transition1);
+}
+
+.translation i{
+    transition: var(--transition1);
+}
+
+.translation:hover .translation-content {
+    display: block;
 }
 
 #sun {
@@ -87,7 +140,7 @@ nav .btn span {
 }
 
 nav .nav-links {
-    margin-right: 50px;
+    margin-right: 80px;
 }
 
 nav .nav-links li {
@@ -274,10 +327,10 @@ nav .togglebtn span {
 
 /* About */
 .container-about .about-image{
-    width: 25vw;
-    height: auto;
+    width: 27vw;
+    height: 50vh;
     align-content: center;
-    padding-left: 3rem;
+    padding: 1rem 2rem;
 }
 
 .about-image img{
@@ -338,23 +391,48 @@ nav .togglebtn span {
 
 .info{
     display: flex;
+    gap: 3rem;
     justify-content: space-between;
+}
+
+.info .info2{
+    width: 50%;
 }
 
 .info ul {
     list-style: none;
     padding: 0;
+    width: 20%;
     margin-bottom: 20px;
 }
 
 .info li {
     color: var(--black);
     font-size: 0.9rem;
+    list-style-type: circle;
+    margin-bottom: 10px;
+}
+
+.info li::marker{
+    color: var(--black);
+}
+
+.info h2{
+    color: var(--black);
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.info li h3{
+    color: var(--black);
+    font-weight: 400;
+    font-size: .9em;
     margin-bottom: 10px;
 }
 
 .info strong {
-    color: var(--orange);
+    font-weight: 500;
+    color: var(--greenblue);
 }
 
 /* Tombol */
@@ -364,31 +442,50 @@ nav .togglebtn span {
     flex-direction: column;
 }
 
-.buttons .btn {
+.buttons .btn{
+    position: relative;
     display: inline-block;
-    background-color: #f77f00;
-    color: #fff;
-    margin:0 0 2rem 5rem;
-    padding: 10px 20px;
-    text-decoration: none;
     text-align: center;
-    border-radius: 5px;
-    margin-right: 10px;
-    transition: background-color 0.3s ease;
+    padding: .5rem 10px;
+    width: 10rem;
+    background: transparent;
+    color: var(--white);
+    border: 2px solid var(--greenblue);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    overflow: hidden;
 }
 
+.buttons .btn::before{
+    content: "";    
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--greenblue);
+    z-index: -1;
+    transition: width .5s ease;
+}
+
+.buttons .btn:hover{
+    color: var(--black);
+}
+
+.buttons .btn:hover::before{
+    width: 0;
+}
+
+
 .buttons .btn1.btn{
-    margin: 1rem 0 2rem;
+margin: 1rem 0 2rem;
 }
 
 .buttons .btn2.btn{
     margin: 0 0 1rem;
 }
 
-
-.buttons .btn:hover {
-    background-color: #d76700;
-}
 
 /* Service */
 .service-content {
@@ -485,19 +582,14 @@ nav .togglebtn span {
     background: var(--black);
     box-shadow: var(--shadow-bottom-card);
     border-radius: 8px;
-    padding: 2rem;
+    padding: 10px 7px 2rem 7px;
     text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s,0.3s ease;
 }
 
-.card:hover{
-    transform: translateY(-80px);
-    box-shadow: var(--shadow-bottom-card);
-}
-
-.card .icon {
-    width: 60px;
-    height: 60px;
+.card .card-image {
+    width: 100%;
+    height: 25vh;
     margin: 0 auto 1rem auto;
     display: flex;
     justify-content: center;
@@ -507,6 +599,13 @@ nav .togglebtn span {
     font-size: 1.5rem;
 }
 
+.card .card-image img{
+    width: 100%;
+    height: 25vh;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
 .card h3 {
     font-size: 1.2rem;
     margin: 1rem 0 0.5rem 0;
@@ -514,7 +613,7 @@ nav .togglebtn span {
 }
 
 .card p {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--white);
     line-height: 1.5;
 }
@@ -536,9 +635,25 @@ nav .togglebtn span {
     transform: translateY(10px);
 }
 
+.card-content .card:nth-child(1):hover {
+    transform: translateY(-60px);
+}
+
+.card-content .card:nth-child(2):hover {
+    transform: translateY(10px);
+}
+
+.card-content .card:nth-child(3):hover {
+    transform: translateY(-60px);
+}
+
+.card-content .card:nth-child(4):hover {
+    transform: translateY(0px);
+}
+
 /* Tambahkan transisi agar smooth */
 .card {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 
@@ -562,7 +677,6 @@ nav .togglebtn span {
 .gallery {
     columns: 300px;
     column-gap: 15px;
-    margin: 0 ;
     overflow: hidden;
 }
 
@@ -590,7 +704,7 @@ nav .togglebtn span {
 
 .gallery-item .description { 
     position: absolute;
-    bottom: 0;
+    bottom: 0;  
     left: 0;
     width: 100%;
     color: white; 
@@ -755,12 +869,12 @@ main {
 
 .input-group input::placeholder {
     font-weight: 500;
-    color: var(--black);
+    color: var(--gray);
 }
 
 .form-section input::placeholder, .form-section textarea::placeholder {
     font-weight: 500;
-    color: var(--black);
+    color: var(--gray);
 }
 
 input, textarea, button {
@@ -784,10 +898,9 @@ textarea {
     font-size: 1rem;
     cursor: pointer;
     overflow: hidden;
-    transition: color 0.4s ease;
 }
 
-.btns1::before {
+.btns1::before{
     content: "";    
     position: absolute;
     top: 0;
@@ -800,13 +913,13 @@ textarea {
     width: 0;
 }
 
-.btns1:hover {
-    color: var(--text-color-white);
-    }
+.btns1:hover{
+    color: var(--white);
+}
 
-    .btns1:hover::before {
+.btns1:hover::before{
     width: 100%;
-    }
+}
 
 .checkbox-group {
     color: var(--black);
@@ -883,7 +996,8 @@ input[type="checkbox"] {
 
 .info-section ul li a, .info-section p a {
     color: var(--black);
-    text-decoration: none;
+    font-weight: 400;
+    text-decoration: underline;
 }
 
 .info-section ul li a:hover, .info-section p a:hover {
@@ -896,20 +1010,20 @@ input[type="checkbox"] {
     height: 30vh;
     padding-bottom: 2rem;
     font-family: Arial, sans-serif;
-  }
-  
-  .footer-container {
+} 
+
+.footer-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 Kolom */
     gap: 20px;
-  }
-  
-  .footer-column h3 {
+} 
+
+.footer-column h3 {
     color: var(--white);
     font-size: 15px;
     font-weight: 300;
     margin: 20px 0;
-  }
+} 
 
 .footer-column.column1{
     margin-left: 5rem;
@@ -919,64 +1033,64 @@ input[type="checkbox"] {
     text-align: center;
 }
   
-  .footer-column ul {
+.footer-column ul {
     list-style: none;
     padding: 0;
-  }
+}
   
   .footer-column ul li {
     margin: 10px 0;
-  }
+}
   
-  .footer-column ul li a {
+.footer-column ul li a {
     color: var(--white);
     text-decoration: none;
-  }
+}
   
-  .footer-column ul li a:hover {
+.footer-column ul li a:hover {
     text-decoration: underline;
-  }
+}
   
-  .footer-social {
+.footer-social {
     grid-column: span 4;
     display: flex;
     padding: 10px;
     justify-content: space-between;
     background: var(--blackgray);
-  }
+}
 
-  .footer-social p{
+.footer-social p{
     color: var(--white);
     font-size: .8rem;
-  }
+}
   
-  .social-widget {
+.social-widget {
     margin-bottom: 20px;
     background: #111;
     padding: 20px;
     border-radius: 8px;
     text-align: left;
-  }
+}
   
-  .social-icons a {
+.social-icons a {
     color: var(--white);
     margin: 0 10px;
     font-size: 17px;
-  }
+}
   
-  .social-icons a:hover {
+.social-icons a:hover,  .social i:hover{
     color: #00cf07;
-  }
+}
 
 .fade{
-    opacity: 0; /* Mulai dengan tidak terlihat */
-    transform: translateY(50px); /* Mulai dengan posisi sedikit ke bawah */
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out; /* Efek transisi */
+    opacity: 0; 
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out; 
 }
 
 .fade.visible {
-    opacity: 1; /* Tampilkan elemen */
-    transform: translateY(0); /* Kembalikan ke posisi asli */
+    opacity: 1; 
+    transform: translateY(0); 
 }
 
 /* Responsive */
@@ -990,25 +1104,21 @@ input[type="checkbox"] {
 }
 
 @media(max-width: 1200px){
-    .container-about h2{
-        margin-left: 10rem;
-    }
     .buttons{
         margin: 0;
     }
     .btn{
         font-size: 15px;
     }
-    .info2{
-        margin: 0 3rem;
-    }
     .gallery {
         columns: 250px; 
         margin: 0 3rem; 
     }
+    .about-content{
+        margin: 0 5rem;
+    }
     .container-about .about-image{
-        align-content: center;
-        padding: 5rem 0 0 0;
+        display: none;
     }
 }
 
@@ -1033,6 +1143,7 @@ input[type="checkbox"] {
         bottom: 0;
         width: 60%;
         height: 50vh;
+        margin-right: 50px;
         background-color: var(--black);
         z-index: 3;
         box-shadow: var(--shadow-bottom);
@@ -1064,18 +1175,21 @@ input[type="checkbox"] {
         display: initial;
         margin-right: 60px;
         position: absolute;
-        right: 2%;
+        right: 4.5rem;
         justify-content: space-between;
         align-items: center;
+    }
+    .translation .bx.bx-globe{
+        right: 4.5rem;
+    }
+    .translation.none{
+        display: none;
     }
     .about-content{
         margin-left: 5rem;
     }
-    .about-image{
-        display: none;
-    }
-    .container-about h2{
-        margin-left: 5rem;
+    .info ul{
+        width: 50%;
     }
 }
 
@@ -1101,7 +1215,10 @@ input[type="checkbox"] {
     .info{
         display: grid;
         grid-template-columns: 1fr 1fr; 
-        gap: 20px;
+        gap: 0;
+    }
+    .info ul{
+        width: 100%;
     }
     .info2{
         margin: 0;
@@ -1152,7 +1269,7 @@ input[type="checkbox"] {
         margin-bottom: 5rem;
     }
     .gallery{
-        margin: 0; /* Pusatkan galeri di layar kecil *//* Gunakan lebar penuh */
+        margin: 0;
     }
     .contact-grid{
         margin: 0;

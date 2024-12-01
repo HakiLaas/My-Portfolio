@@ -7,7 +7,7 @@
     /* Color */
     --white: #fafdff;
     --black: #323232;
-    --gray: #dddddd;
+    --gray: #505050;
     --blackgray: #515151;
 
     /* Color Test */
@@ -46,7 +46,6 @@
     padding: 0;
     font-family: poppins, sans-serif;
     text-decoration: none;
-    transition: .2;
     transition: all .3s ease;
     scroll-behavior: smooth;
     list-style-type: none;
@@ -59,6 +58,7 @@ body{
 body.dark{
     --black: #fafdff;
     --white: #323232;
+    --gray: #d4d4d4;
     --greenblue: #7cf03d;
     --green-button: #00a57f;
     --text-black: #fff;
